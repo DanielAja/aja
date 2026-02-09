@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share your feedback and get support">
+    <title>Feedback - AJA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AJA</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="apps.html">Apps</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>We'd Love to Hear From You</h1>
+                <p>Share your feedback, report issues, or request new features</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="feedback-container">
+                    <div class="feedback-info">
+                        <h2>Get in Touch</h2>
+                        <p>
+                            Your feedback helps us improve and build better applications. Whether you have
+                            a question, found a bug, or have a feature request, we want to hear from you.
+                        </p>
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <div class="contact-icon-minimal">24h</div>
+                                <div>
+                                    <h3>Response Time</h3>
+                                    <p>We typically respond within 24-48 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedback-form">
+                        <form id="feedbackForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="category">Category *</label>
+                                <select id="category" name="category" required>
+                                    <option value="">Select a category</option>
+                                    <option value="bug">Bug Report</option>
+                                    <option value="feature">Feature Request</option>
+                                    <option value="support">Support</option>
+                                    <option value="feedback">General Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="app">Related App</label>
+                                <select id="app" name="app">
+                                    <option value="">Select an app (optional)</option>
+                                    <option value="sound-market">Sound Market</option>
+                                    <option value="general">General / Not app-specific</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Brief description">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required placeholder="Tell us more..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Send Feedback</button>
+
+                            <div class="success-message" id="successMessage">
+                                Thank you! Your feedback has been received.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 AJA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Background Effects -->
+    <div class="bg-effects">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('feedbackForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function(e) {
+            // If not using a form service, prevent default and show success
+            if (form.action.includes('YOUR_FORM_ID')) {
+                e.preventDefault();
+                successMessage.style.display = 'flex';
+                form.reset();
+
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>
