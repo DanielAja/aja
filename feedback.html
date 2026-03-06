@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">AJA</a>
+            <a href="index.html" class="logo">AJA Digital<span style="font-size: 0.6em; opacity: 0.5;">.co</span></a>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="apps.html">Apps</a></li>
@@ -23,8 +23,8 @@
     <main>
         <section class="page-header">
             <div class="container">
-                <h1>We'd Love to Hear From You</h1>
-                <p>Share your feedback, report issues, or request new features</p>
+                <h1>We'd <em>Love</em> to <u>Hear From You</u></h1>
+                <p>Share your feedback, report issues, or <em>request new features</em></p>
             </div>
         </section>
 
@@ -32,10 +32,10 @@
             <div class="container">
                 <div class="feedback-container">
                     <div class="feedback-info">
-                        <h2>Get in Touch</h2>
+                        <h2>Get in <em>Touch</em></h2>
                         <p>
-                            Your feedback helps us improve and build better applications. Whether you have
-                            a question, found a bug, or have a feature request, we want to hear from you.
+                            Your feedback helps us <b>improve</b> and build <em>better applications</em>. Whether you have
+                            a question, found a bug, or have a feature request, we <u>want to hear from you</u>.
                         </p>
                         <p class="feedback-email">Or email us directly at <a href="mailto:daniel@ajadigital.co">daniel@ajadigital.co</a></p>
                     </div>
@@ -71,6 +71,7 @@
                                     <option value="6seven">6Seven</option>
                                     <option value="flowbuilder">Flowbuilder</option>
                                     <option value="sound-market">Sound Market</option>
+                                    <option value="gestures-for-finder">Gestures for Finder</option>
                                     <option value="general">General / Not app-specific</option>
                                 </select>
                             </div>
@@ -88,7 +89,7 @@
                             <button type="submit" class="btn btn-primary">Send Feedback</button>
 
                             <div class="success-message" id="successMessage">
-                                Thank you! Your feedback has been received.
+                                <em>Thank you!</em> Your feedback has been received.
                             </div>
                         </form>
                     </div>
@@ -99,23 +100,15 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 AJA. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+            <p>&copy; 2025 AJA. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
         </div>
     </footer>
-
-    <!-- Background Effects -->
-    <div class="bg-effects">
-        <div class="gradient-orb orb-1"></div>
-        <div class="gradient-orb orb-2"></div>
-        <div class="gradient-orb orb-3"></div>
-    </div>
 
     <script>
         const form = document.getElementById('feedbackForm');
         const successMessage = document.getElementById('successMessage');
 
         form.addEventListener('submit', function(e) {
-            // If not using a form service, prevent default and show success
             if (form.action.includes('YOUR_FORM_ID')) {
                 e.preventDefault();
                 successMessage.style.display = 'flex';
